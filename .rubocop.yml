@@ -22,3 +22,9 @@ Style/StringLiterals:
   SupportedStyles:
     - single_quotes
     - double_quotes
+Layout/IndentationStyle:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Layout/IndentationWidth:
+  Enabled: false

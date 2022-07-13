@@ -1,0 +1,22 @@
+<h2>List Tours</h2>
+<%= link_to "<button class='btn btn-success'>New</button>".html_safe, new_admin_tour_path %>
+<table style="width:100%">
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Action</th>
+  </tr>
+  <% @tours.map do |tour| %>
+    <tr>
+      <td><%= tour.id %></td>
+      <td><%= tour.title %></td>
+      <td class="img-tour"><img src="<%= tour.image.url %>" /></td>
+      <td>
+        <%= link_to "<button class='btn btn-dark'>View</button>".html_safe, admin_tour_path(tour) %>
+        <%= link_to "<button class='btn btn-info'>Edit</button>".html_safe, edit_admin_tour_path(tour) %>
+        <%= link_to "<button class='btn btn-danger'>Delete</button>".html_safe, admin_tour_path(tour), method: :delete %>
+      </td>
+    </tr>
+  <% end %>
+</table>

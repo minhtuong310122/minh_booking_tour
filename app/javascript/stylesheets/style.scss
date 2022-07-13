@@ -1,9 +1,20 @@
+table {
+  margin-top: 10px;
+}
+th, td {
+  border:1px solid black;
+}
+
 ul li {
 	list-style: none;
 }
 
 a {
 	text-decoration: none;
+}
+
+.list_errors li{
+	list-style: circle;
 }
 
 .box-user {
@@ -14,4 +25,16 @@ a {
 
 .ta-center{
 	text-align: center;
+}
+
+.img-tour {
+	width: 70%;
+}
+
+.img-tour img{
+  width: 30%;
+}
+
+.er_msg {
+	color: red;
 }

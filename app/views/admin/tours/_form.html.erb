@@ -10,5 +10,9 @@
   Time in day: <%= f.text_field :time_in_day, class: "form-control" %><br />
   Limit member: <%= f.number_field :limit_member, class: "form-control" %><br />
 
-  <%= f.submit class: "btn btn-success" %>
+  <% if tour.persisted? %>
+    <%= f.submit "Update", class: "btn btn-dark" %>
+  <% else %>
+    <%= f.submit "Create", class: "btn btn-success" %>
+  <% end %>
 <% end %>

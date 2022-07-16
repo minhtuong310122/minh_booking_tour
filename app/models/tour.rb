@@ -1,6 +1,6 @@
 class Tour < ActiveRecord::Base
   mount_uploader :image, FileUploader
-  enum tour_type: {normal_tour: 0, fixed_tour: 1}
+  enum tour_type: { normal_tour: 0, fixed_tour: 1 }
   validates :title, :image, :price, presence: true
   validates :time_in_day, presence: true, if: :fixed_tour?
   validates :start_date, :end_date, presence: true, if: :normal_tour?
@@ -25,6 +25,7 @@ class Tour < ActiveRecord::Base
   def should_not_have_start_date
     errors.add(:start_date, "shouldn't present") if start_date.present?
   end
+
   def should_not_have_end_date
     errors.add(:end_date, "shouldn't present") if end_date.present?
   end

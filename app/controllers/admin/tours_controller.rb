@@ -1,5 +1,5 @@
 class Admin::ToursController < Admin::AdminController
-  before_action :set_tours, except: [:index, :new, :create]
+  before_action :set_tours, except: %i[index new create]
 
   def index
     @tours = Tour.all
@@ -42,6 +42,7 @@ class Admin::ToursController < Admin::AdminController
   end
 
   def params_tour
-    params.require(:tour).permit :title, :image, :price, :description, :tour_type, :start_date, :end_date, :time_in_day, :limit_member
+    params.require(:tour).permit :title, :image, :price, :description, :tour_type, :start_date, :end_date,
+                                 :time_in_day, :limit_member
   end
 end

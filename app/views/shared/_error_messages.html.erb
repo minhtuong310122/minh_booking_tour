@@ -1,0 +1,7 @@
+<% if tour.errors.full_messages.present? %>
+  <% tour.errors.full_messages.map do |msg| %>
+    <ul class="list_errors">
+      <li class="er_msg"><%= msg %></li>
+    </ul>
+  <% end %>
+<% end %>

@@ -38,3 +38,47 @@ a {
 .er_msg {
 	color: red;
 }
+
+.block-tour {
+  width: 300px;
+  height: 450px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.block-tour img {
+  width: 100%;
+  max-height: 170px;
+  margin-bottom: 10px;
+}
+
+.block-tour span {
+  color: #ff9800;
+}
+
+.btn-tour {
+  position: absolute;
+  bottom: 10px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+/* footer */
+
+.footer {
+  background-color: #198754;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.footer h4 {
+  margin-bottom: 0;
+}

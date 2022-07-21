@@ -1,4 +1,4 @@
-class Tour < ActiveRecord::Base
+class Tour < ApplicationRecord
   mount_uploader :image, FileUploader
   enum tour_type: { normal_tour: 0, fixed_tour: 1 }
   validates :title, :image, :price, presence: true
@@ -9,6 +9,8 @@ class Tour < ActiveRecord::Base
   validate :should_not_have_time_in_day, if: :normal_tour?
   validate :should_not_have_start_date, if: :fixed_tour?
   validate :should_not_have_end_date, if: :fixed_tour?
+
+  has_many :likes, dependent: :destroy
 
   private
 

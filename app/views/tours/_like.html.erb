@@ -1,0 +1,4 @@
+<span><%= tour.likes.count %></span>
+
+<%= link_to icon_like(tour), like_tour_path(tour), method: :post, remote: true %>
+

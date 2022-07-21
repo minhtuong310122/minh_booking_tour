@@ -7,4 +7,10 @@ Rails.application.routes.draw do
 
     resources :tours
   end
+
+  resources :tours do
+    member do
+      post "like"
+    end
+  end
 end

@@ -1,0 +1,22 @@
+<h2>List Member</h2>
+<table style="width:100%" class="mb-4">
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Date of Birth</th>
+    <th>Passport</th>
+  </tr>
+  <% @booking.buyers.each do |b| %>
+    <tr>
+      <td><%= b.id %></td>
+      <td><%= b.name %></td>
+      <td><%= b.phone %></td>
+      <td><%= b.date_of_birth %></td>
+      <td><%= b.passport %></td>
+    </tr>
+  <% end %>
+</table>
+<h5>Price: <%= @tour.price * @booking.buyers.count %></h5>
+<h5>Status: <%= @booking.status %> </h5>
+<%= link_to "<button class='badge bg-warning text-dark'>Cancle</button>".html_safe %>

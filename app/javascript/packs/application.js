@@ -11,6 +11,7 @@ import "jquery"
 import "bootstrap"
 import "../stylesheets/application"
 import "../stylesheets/style"
+import "@nathanvda/cocoon"
 
 Rails.start()
 Turbolinks.start()

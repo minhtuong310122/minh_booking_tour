@@ -1,0 +1,19 @@
+<h2 class="mb-5">New Booking</h2>
+<button onClick="addGuest()" class="btn btn-success mb-2">Add member</button>
+<%= form_for @booking, url: tour_bookings_path(@tour), method: :post do |f| %>
+  <div id="guest-list">
+    <%= render "bookings/buyer_form", f: f %>
+  </div>
+  <%= f.submit %>
+<% end %>
+
+
+<script>
+  function addGuest(){
+    var n = $("#guest-list > div").length
+
+    var text = "<div class='mt-5 row'><div class='col-md-6 col-sm-12 mb-3'><div class='form-group'><label class='form-label' for='booking_guests_attributes_" + n +"name'>Name</label><input class='form-control' type='text' name='booking[guests_attributes][" + n +"][name]' id='booking_guests_attributes" + n + "name'></div></div><div class='col-md-6 col-sm-12 mb-3'><div class='form-group'><label class='form-label' for='booking_guests_attributes"+ n +"phone'>Phone</label><input class='form-control' type='text' name='booking[guests_attributes]["+ n +"][phone]' id='booking_guests_attributes"+ n +"phone'></div></div><div class='col-md-6 col-sm-12 mb-3'><div class='form-group'><label class='form-label' for='booking_guests_attributes"+ n +"date_of_birth'>Date of Birth</label><input class='form-control' type='date' name='booking[guests_attributes]["+ n +"][date_of_birth]' id='booking_guests_attributes"+ n +"date_of_birth'></div></div><div class='col-md-6 col-sm-12 mb-3'><div class='form-group'><label class='form-label' for='booking_guests_attributes"+ n +"passport'>Passport</label><input class='form-control' type='text' name='booking[guests_attributes]["+ n +"][passport]' id='booking_guests_attributes"+ n +"_passport'></div></div></div>"
+
+    $("#guest-list").append(text)
+  }
+</script>

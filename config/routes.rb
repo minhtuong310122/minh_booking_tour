@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     member do
       post "like"
     end
+
+    resources :bookings, only: [:create, :new, :show]
   end
 end

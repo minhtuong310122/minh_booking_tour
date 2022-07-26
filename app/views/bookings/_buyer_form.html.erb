@@ -1,0 +1,32 @@
+<%= f.fields_for :buyers do |g| %>
+  <div class="row">
+    <div class="col-md-6 col-sm-12 mb-3">
+      <div class="form-group">
+        <%= g.label :name, class: "form-label" %>
+        <%= g.text_field :name, class: "form-control" %>
+      </div>
+    </div>
+
+
+    <div class="col-md-6 col-sm-12 mb-3">
+      <div class="form-group">
+        <%= g.label :phone, class: "form-label" %>
+        <%= g.text_field :phone, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12 mb-3">
+      <div class="form-group">
+        <%= g.label :date_of_birth, class: "form-label" %>
+        <%= g.date_field :date_of_birth, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12 mb-3">
+      <div class="form-group">
+        <%= g.label :passport, class: "form-label" %>
+        <%= g.text_field :passport, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+<% end %>

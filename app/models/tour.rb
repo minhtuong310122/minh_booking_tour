@@ -11,6 +11,7 @@ class Tour < ApplicationRecord
   validate :should_not_have_end_date, if: :fixed_tour?
 
   has_many :likes, dependent: :destroy
+  has_many :bookings
 
   private
 
